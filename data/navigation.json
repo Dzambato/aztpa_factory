@@ -1,7 +1,76 @@
 {
   "navPages": {
-    "Главная страница" : "main.html",
-    "О компании" : "about.html",
-    "Каталог" : "catalog.html"
+    "0" : {
+      "title": "Главная",
+      "link": "main.html"
+    },
+    "1" : {
+      "title": "О заводе",
+      "link": "main.html",
+      "childrens": [{
+        "title": "История",
+        "link": "main.html"
+      },{
+        "title": "Сертификаты",
+        "link": "main.html"
+      }]
+    },
+    "2" : {
+      "title": "Каталог",
+      "link": "main.html",
+      "childrens": [{
+        "title": "Автоцистерны",
+        "link": "main.html"
+      },{
+        "title": "Запчасти",
+        "link": "main.html"
+      }]
+    },
+    "3" : {
+      "title": "Склад",
+      "link": "main.html"
+    },
+    "4" : {
+      "title": "Партнеры",
+      "link": "main.html"
+    },
+    "5" : {
+      "title": "Полезное",
+      "link": "main.html",
+      "childrens": [{
+        "title": "Статьи",
+        "link": "main.html"
+      },{
+        "title": "Новости",
+        "link": "main.html"
+      }]
+    },
+    "6" : {
+      "title": "Контакты",
+      "link": "main.html"
+    }
+  },
+  "topContacts": {
+    "phone": {
+      "value": "+7(48753)9-07-70",
+      "icon": "phone"
+    },
+    "mail": {
+      "value": "office@aztpa.ru",
+      "icon": "mail"
+    },
+    "skype": {
+      "value": "someskype?call",
+      "icon": "skype"
+    }
+  },
+  "settings": {
+    "brand": {
+      "logo": "/static/img/general/brand.svg",
+      "text": "АЗТПА",
+      "width": "30px",
+      "height": "30px"
+    },
+    "topLineTitle": "ЗАО Тяжпромарматура - Алексинский завод трубопроводной арматуры"
   }
 }

@@ -1,3 +1,13 @@
 nav.navigation
-    div.navigation__item
-        a 1
+    each root, index in nav.navPages
+        div.navigation__item
+            a(href=root.link)= root.title
+            if root.childrens
+                div.navigation__submenu
+                    each val, index in root.childrens
+                        div.navigation__sub-item
+                            a(href=val.link)= val.title
+                            if val.childrens
+                                div.navigation__sub-item
+                                    each val, index in val.childrens
+                                        a(href=val.link)= val.title
