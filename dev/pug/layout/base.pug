@@ -1,0 +1,45 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU" class="no-js")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        block meta
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="generator" content="азтпа")
+        meta(name="theme-color" content="#333333")
+        meta(name="msapplication-TileColor" content="#2b5797")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black")
+        meta(name="apple-mobile-web-app-title" content="азтпа")
+        meta(name="og:type" content="website")
+        meta(name="application-name" content="Азтпа")
+        meta(property="og:title" content="Сайт АЗТПА!")
+        meta(property="og:description" content="")
+        meta(name="keywords" content="")
+        meta(name="description" content="")
+        meta(property="og:url" content="https://aztpa.ru/ru/")
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+
+        link(rel="alternate" hreflang="en" href="/en/")
+        link(rel="alternate" hreflang="ru-ru" href="/ru-ru/")
+        block styles
+
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+    body(class=pageClass)
+        include ../modules/top-line
+        include ../modules/header
+            .content
+                block content
+            include ../modules/footer
+        script(src="static/js/jquery.js")
+        script(src="static/js/libs.min.js")
+        script(src="static/js/main.js")
+        block script
