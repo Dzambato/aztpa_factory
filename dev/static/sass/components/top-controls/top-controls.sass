@@ -1,0 +1,42 @@
+$color: $accent-white
+$width: 15px
+$height: 15px
+$font-size: 12px
+$line-height: $top-line_height
+$bg-toggle: darken($base-color,5)
+$transition: $base-transition
+
+.top-controls
+  display: block
+  text-align: center
+  padding: 0
+  list-style: none
+  font-size: 0px
+  margin: 0
+  white-space: nowrap
+  li
+    display: inline-block
+    vertical-align: middle
+
+  a
+    position: relative
+    display: block
+    padding-left: 31px
+    padding-right: 11px
+    font-size: $font-size
+    line-height: $line-height
+    color: $color
+    transition: background-color $transition
+
+    &:hover
+      background-color: $bg-toggle
+
+  svg
+    position: absolute
+    left: 11px
+    top: 50%
+    margin-top: -($height / 2)
+    fill: $color
+    width: $width
+    height: $height
+

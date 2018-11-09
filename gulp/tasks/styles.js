@@ -1,7 +1,7 @@
 module.exports = function () {
     $.gulp.task('styles:build', () => {
         return $.gulp.src([
-            './dev/static/sass/index.sass'
+            './dev/static/sass/pages/index/index.sass'
         ])
             .pipe($.gp.sass({
             }))
@@ -15,7 +15,7 @@ module.exports = function () {
 
     $.gulp.task('styles:dev', () => {
         return $.gulp.src([
-            './dev/static/sass/index.sass'
+            './dev/static/sass/pages/index/index.sass'
         ])
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({

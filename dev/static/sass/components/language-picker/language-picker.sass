@@ -1,0 +1,59 @@
+$font-size: 12px
+$color: $accent-white
+$width: 15px
+$height: 15px
+$line-height: $top-line_height
+$bg-toggle: darken($base-color,5)
+$transition: $base-transition
+$bg-dropdown: darken($base-color,20)
+$bg-dropdown--hover: lighten($bg-toggle,5)
+
+.dropdown-link
+  &.active
+    background-color: $bg-toggle
+
+.language
+  &-pick
+    cursor: pointer
+    font-size: $font-size
+    transition: background-color $transition
+
+    &.active
+      background-color: $bg-dropdown--hover
+
+    &:hover
+      background-color: $bg-dropdown--hover
+
+  &-picker
+    position: relative
+    white-space: nowrap
+
+    .dropdown-toggle
+      position: relative
+      display: block
+      padding-left: 31px
+      padding-right: 11px
+      color: $color
+      font-size: $font-size
+      line-height: $line-height
+      transition: background-color $transition
+      cursor: pointer
+
+      &:hover
+        background-color: $bg-toggle
+
+    .scrollable-menu
+      height: auto
+      max-height: 40rem
+      overflow-x: hidden
+      background-color: $bg-dropdown
+      color: $color
+
+    svg
+      position: absolute
+      left: 11px
+      top: 50%
+      margin-top: -($height / 2)
+      fill: $color
+      width: $width
+      height: $height

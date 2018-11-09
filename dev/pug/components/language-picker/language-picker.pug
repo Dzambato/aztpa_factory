@@ -1,0 +1,9 @@
+div.language-picker.dropdown
+    a#language-picker__button.dropdown-toggle.dropdown-link(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        = "Русский"
+        +icon("world")
+    div.dropdown-menu.scrollable-menu
+        form#language-picker(action="/i18n/" method="post")
+            input(name="next" type="hidden" value="/ru-ru/")
+            a.dropdown-item.language-pick.dropdown-link.active(data-lang="ru-ru")= "Русский"
+            a.dropdown-item.language-pick.dropdown-link(data-lang="en")= "English"

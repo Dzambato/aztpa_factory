@@ -2,6 +2,11 @@
 @import "fonts"
 @import "libs"
 
+html
+	font-size: $font-size - 2
+	+media-breakpoint-up(md)
+		font-size: $font-size
+
 ::placeholder
 	color: #666
 
@@ -10,13 +15,13 @@
 	color: #fff
 
 body
-	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	text-transform: uppercase
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -24,6 +29,7 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+
 
 .img-responsive
 	display: block
@@ -37,6 +43,14 @@ body
 
 b, strong
 	font-weight: bold
+
+a
+	color: inherit
+	text-decoration: none
+
+	&:hover
+		color: inherit
+		text-decoration: none
 
 //Модули
 @import "modules/modules.sass"
