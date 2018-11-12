@@ -3,6 +3,7 @@ $section-offset: $vertical-offset
 $of-col: 10px
 $hg-big: 365px
 $hg-sm: 230px
+$br-color: #c0c0c0
 
 .output
   background-color: $bg-section
@@ -36,8 +37,13 @@ $hg-sm: 230px
 
   &__item
     position: relative
-    outline: 1px solid $text
     background-color: blue
+    border: 1px solid $br-color
+
+    img
+      display: block
+      height: 100%
+      margin: 0 auto
 
     & > a
 
