@@ -1,13 +1,17 @@
 nav.navigation
     each root, index in nav.navPages
-        div.navigation__item
-            a(href=root.link)= root.title
+        - var active_class = index == 0? 'active':''
+        div.navigation__item(class=active_class)
             if root.childrens
+                a.navigation__item-link(href=root.link)= root.title
+                    +icon('down-arrow')
                 div.navigation__submenu
                     each val, index in root.childrens
                         div.navigation__sub-item
-                            a(href=val.link)= val.title
+                            a.navigation__subitem-link(href=val.link)= val.title
                             if val.childrens
-                                div.navigation__sub-item
+                                div.navigation__subitem
                                     each val, index in val.childrens
-                                        a(href=val.link)= val.title
+                                        a.navigation__subitem-link(href=val.link)= val.title
+            else
+                a.navigation__item-link(href=root.link)= root.title

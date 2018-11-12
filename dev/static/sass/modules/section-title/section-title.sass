@@ -1,0 +1,27 @@
+$bg-color: lighten(desaturate(adjust-hue($base-color, -15), 31.57), 13.92)
+$cl-text: $accent-white
+$sz-text: 30px
+$cl-accent: $accent-red
+$of-bottom: 35px
+
+.section-title
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin-left: 5px
+  margin-bottom: rem($of-bottom)
+  background-color: $bg-color
+  color: $cl-text
+  font-size: $sz-text
+  line-height: 1
+  padding: 10px 15px
+
+  &:before
+    content: ''
+    border-left: 2px solid $cl-accent
+    border-bottom: 2px solid $cl-accent
+    width: 30px
+    height: 30px
+    position: absolute
+    bottom: -5px
+    left: -5px

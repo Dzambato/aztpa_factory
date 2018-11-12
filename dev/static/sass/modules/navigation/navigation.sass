@@ -1,0 +1,56 @@
+$font-size: +rem(14px)
+$color--hover: $accent-white
+$color: lighten(desaturate(adjust-hue($base-color, -14), 5.36), 0.59)
+$transition: $base-transition
+$cl-active: $accent-red
+
+.navigation
+  display: flex
+  flex-direction: column
+
+  &__submenu
+    display: none
+
+  &__item
+    font-size: $font-size
+
+    &-link
+      position: relative
+      display: block
+      padding: rem(15px)
+      padding-right: rem(25px)
+      padding-left: rem(25px)
+      white-space: nowrap
+      font-weight: 500
+      color: $color
+      transition: all $transition
+
+      & > svg
+        position: absolute
+        right: 7px
+        top: 50%
+        transform: translateY(-50%)
+        fill: $color
+        width: 10px
+        height: 10px
+        display: inline-block
+        vertical-align: middle
+        transition: all $transition
+
+    &:not(.active):hover > &-link
+        color: $cl-active
+
+    &:not(.active):hover > &-link > svg
+      fill: $cl-active
+
+    &.active
+
+      & > .navigation__item-link
+        color: $cl-active
+
+        > svg
+          fill: $cl-active
+
+
+  +media-breakpoint-up(md)
+    flex-direction: row

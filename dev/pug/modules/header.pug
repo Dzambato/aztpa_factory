@@ -1,8 +1,11 @@
-header
-    .container-fluid
-        .wrapper.d-flex.justify-content-between
+header.header
+    .header__top
+        .container.d-flex.justify-content-between.align-items-center
             include ../components/brand/brand
             include ../components/m-btn/m-btn
-            include ../components/get-call/get-call
-        .wrapper
+            .wrapper
+                .delimeter-line--vertical
+                include ../components/get-call/get-call
+    .header__bottom
+        .container
             include menu

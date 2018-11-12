@@ -1,0 +1,53 @@
+$sz-title: 22px
+$sz-text: 16px
+$cl-title: $text
+$section-offset: 25px
+$bg-section: #f7f7f7
+$bg-item: $accent-white
+$w-item: 450px
+$sz-logo: 45px
+
+.promo
+  padding-top: rem($section-offset)
+  padding-bottom: rem($section-offset)
+  background-color: $bg-section
+
+  .container
+    flex-direction: column
+
+    +media-breakpoint-up(md)
+      flex-direction: row
+
+  &__item
+    position: relative
+    padding: 15px 20px
+    width: 100%
+    background-color: $bg-item
+    box-shadow: 0px 2px 2px 0px lighten($text, 50.20)
+
+    +media-breakpoint-up(md)
+
+      &:not(:last-child)
+        margin-right: 15px
+
+    +media-breakpoint-up(md)
+      max-width: $w-item
+
+    svg
+      width: $sz-logo
+      height: 55px
+
+    &-logo
+
+
+    &-title
+      margin-bottom: 5px
+      font-size: rem($sz-title)
+      line-height: 1
+      color: $cl-title
+      font-weight: 600
+
+    &-text
+      font-size: rem($sz-text)
+      line-height: 1.1
+      margin-left: 5px

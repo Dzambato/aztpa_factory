@@ -1,5 +1,5 @@
 $default-font: "Exo 2", sans-serif
-$base-color: #275a93
+$base-color: #1e3685
 $accent-red: #e91936
 $accent-white: #fff
 $text: #333
@@ -11,13 +11,26 @@ $font-size: 10px
 $base-transition: 0.2s
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$max-width-xl: 1140px
+$max-width-lg: 960px
+$max-width-md: 720px
+$max-width-sm: 540px
+
+$break-xl: 1200px
+$break-lg: 992px
+$break-md: 768px
+$break-sm: 576px
+$break-xs: 0px
+
 $grid-gutter-width: 30px
 $grid-columns: 12
-$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
-$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+$grid-breakpoints: (xs: $break-xs, sm: $break-sm, md: $break-md, lg: $break-lg, xl: $break-xl)
+$container-max-widths: (sm: $max-width-sm, md: $max-width-md, lg: $max-width-lg, xl: $max-width-xl)
 
 $gutter: $grid-gutter-width
 
 // Components settings
 $top-line_height: 30px
 
+// Section settings
+$vertical-offset: 45px

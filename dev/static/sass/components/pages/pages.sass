@@ -1,0 +1,87 @@
+$gutter: 15px
+$bg-title: #6e8cab
+$cl-text: $accent-white
+$sz-text: 18px
+$br-item: #cccccc
+$cl-text: lighten(desaturate(adjust-hue($base-color, -15), 31.57), 13.92)
+
+.pages
+  @include section-offset-vertical()
+
+  &__col
+    padding: 0
+
+    +media-breakpoint-up(md)
+      &:not(:last-child)
+        padding-right: rem($gutter)
+
+  &-item
+
+    &__title
+      @include h4-title()
+
+    &__content
+      position: relative
+      padding: 15px
+      padding-top: 20px
+      padding-bottom: 35px
+      border: 1px solid #cccccc
+
+    &__all
+      position: absolute
+      bottom: 10px
+      display: block
+      font-size: 12px
+      margin-top: 10px
+      cursor: pointer
+
+      &:hover
+        text-decoration: underline
+    &.md
+
+      .pages-item__content
+        height: 315px
+
+    &.lg
+      height: 100%
+      background-color: lightgray
+
+    &.sm
+      border: 1px solid $br-item
+
+      &:not(:last-child)
+        margin-bottom: 15px
+
+      .pages-item__inner
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 170px
+        padding: rem(20px)
+
+      .pages-item__text
+        color: $cl-text
+        font-size: 20px
+        font-weight: 700
+        line-height: 1.1
+
+        &.icon
+          position: relative
+          padding-left: 70px
+
+
+          > svg
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 60px
+            height: 60px
+
+      .pages-item__link
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%

@@ -1,0 +1,11 @@
+div.main-slider
+    each item, index in content.mainSlider
+        div.main-slider__item(style=`background-image: url('${item.img}');`)
+            div.main-slider__container
+                div.main-slider__body
+                    if index == 0
+                        h1.main-slider__title= item.title
+                    else
+                        div.main-slider__title= item.title
+                    p.main-slider__text= item.description
+                    a.btn.main-slider__btn(href=item.url)= item.btnText

@@ -1,0 +1,26 @@
+div.pages
+    .container
+        div.d-flex.flex-column.flex-lg-row
+            div.pages__col.pages__col-sm.col-lg-3.pl-lg-3
+                div.pages-item.sm
+                    div.pages-item__inner
+                        a.pages-item__link(href="javascript:void(0)")
+                        div.pages-item__text Мужчина заглянул в гейзер и попал в тюрьму
+
+                div.pages-item.sm
+                    div.pages-item__inner
+                        a.pages-item__link(href="javascript:void(0)")
+                        div.pages-item__text.icon
+                            +icon('valve')
+                            span ЦЕНЫ на арматуру
+
+            div.pages__col.pages__col-lg.col-lg-5
+                div.pages-item.lg
+
+            div.pages__col.pages__col-md.col-lg-4
+                div.pages-item.md
+                    div.pages-item__inner
+                        div.pages-item__title Новости
+                        div.pages-item__content
+                            include ../in-news/in-news
+                            a.pages-item__all(href="javascript:void(0)") Все новости

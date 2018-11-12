@@ -10,3 +10,4 @@ $('.language-pick').on('click', (e) => {
     $languagePickerForm.append($input);
     $languagePickerForm.submit();
 });
+

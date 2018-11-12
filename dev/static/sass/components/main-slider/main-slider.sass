@@ -1,0 +1,89 @@
+$hg-1: 250px
+$hg-2: 450px
+$bg-body: transparentize(lighten(saturate(adjust-hue($base-color, -18), 10.47), 8.24),.83)
+$br-r-body: 6px
+$cl-title: $accent-white
+$cl-btn: $accent-white
+$z-controls: 1
+$transition: $base-transition
+
+.main-slider
+  
+  &__item
+    position: relative
+    background-size: cover
+    background-position: top center
+    background-repeat: no-repeat
+    height: $hg-1
+
+    +media-breakpoint-up(md)
+      height: $hg-2
+
+  &__container
+    height: $hg-1
+    display: flex
+    justify-content: center
+    align-items: center
+    +make-container()
+    max-width: $max-width-xl
+
+    +media-breakpoint-up(md)
+      justify-content: flex-start
+      height: $hg-2
+
+  &__body
+    padding: rem(20px)
+    padding-left: 40px
+    border-radius: $br-r-body
+    background-color: rgba(45, 92, 144, 0.83)
+    color: $cl-title
+    max-width: 530px
+
+  &__title
+    color: inherit
+    font-size: rem(30px)
+
+  &__text
+    color: inherit
+    font-size: rem(16px)
+
+  &__btn
+    @extend .btn-custom
+    font-size: 12px
+    background: none
+    color: $cl-btn
+    border-color: $cl-btn
+
+    &:hover,&:focus
+      background: $cl-btn
+      color: $text
+      
+  &__controls
+    position: absolute
+    opacity: 0
+    transition: opacity $transition
+    visibility: hidden
+    top: 50%
+    transform: translateY(-50%)
+    z-index: $z-controls
+    font-size: 35px
+    cursor: pointer
+    width: 40px
+    height: 40px
+    line-height: 36px
+    text-align: center
+    border: 2px solid $accent-white
+    background-color: transparentize($text, .5)
+    color: $accent-white
+    border-radius: 3px
+
+    &.prev
+      left: 25px
+
+    &.next
+      right: 25px
+
+  &:hover
+    .main-slider__controls
+      opacity: 1
+      visibility: visible

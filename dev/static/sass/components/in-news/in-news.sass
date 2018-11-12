@@ -1,0 +1,43 @@
+$sz-text: 16px
+$sz-logo: 18px
+$cl-accent: $accent-red
+$br-color: #e4e4e4
+$tr: $base-transition
+$offset-vertical: 17px
+
+.in-news
+  padding: 0
+  list-style: none
+  margin: 0
+  
+  &__logo
+    position: absolute
+    left: 0
+    top: 2px
+    color: $cl-accent
+    font-size: $sz-logo
+    line-height: 1
+
+  &__item
+    position: relative
+    padding-left: 23px
+
+    &:not(:last-child)
+      border-bottom: 1px solid $br-color
+      margin-bottom: $offset-vertical
+      padding-bottom: $offset-vertical
+
+    a
+      display: block
+      font-size: $sz-text
+      line-height: 1.1
+      margin-bottom: 3px
+      font-weight: 500
+
+      &:hover
+        color: $cl-accent
+        transition: color $tr
+
+    time
+      display: block
+      font-size: 11px

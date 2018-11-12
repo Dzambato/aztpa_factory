@@ -1,0 +1,27 @@
+$border-top: lighten(desaturate(adjust-hue($base-color, -226), 63.19), 58.24)
+$border-bottom: lighten(desaturate(adjust-hue($base-color, -226), 63.19), 48.04)
+$vertical-height: 50px
+
+.header
+  &__top
+    padding: 15px 0px
+
+
+  &__bottom
+    border-top: 1px solid $border-top
+    border-bottom: 1px solid $border-bottom
+
+  .wrapper
+    position: relative
+
+  .delimeter-line
+
+    &--vertical
+      position: absolute
+      width: 1px
+      background-color: $border-top
+      height: $vertical-height
+      left: -60px
+      top: 50%
+      margin-top: -($vertical-height / 2)
+

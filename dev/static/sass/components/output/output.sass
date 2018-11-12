@@ -1,0 +1,114 @@
+$bg-section: $accent-white
+$section-offset: $vertical-offset
+$of-col: 10px
+$hg-big: 365px
+$hg-sm: 230px
+
+.output
+  background-color: $bg-section
+
+  .container
+    padding-top: rem($section-offset)
+    padding-bottom: rem($section-offset)
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+
+    +media-breakpoint-up(md)
+      flex-wrap: nowrap
+
+  &__wrap
+    align-items: flex-start
+    display: flex
+    margin-bottom: $of-col
+
+  &__col
+    width: 100%
+    overflow: hidden
+
+    +media-breakpoint-up(md)
+      width: 50%
+      &:nth-child(odd)
+        padding-right: $of-col
+
+  &__item
+    position: relative
+    outline: 1px solid $text
+    background-color: blue
+
+    & > a
+
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      
+    &-box
+      width: 100%
+      position: absolute
+      background-color: transparentize(#4d75a1,.8)
+
+    &-title
+      display: block
+      padding-left: 15px
+      padding-right: 15px
+      text-align: center
+      background-color: #4d75a1
+      color: white
+      font-size: 16px
+
+    &.big
+      background: #FFF;
+      overflow: hidden;
+      position: relative;
+      height: $hg-big
+      transition: all 1s cubic-bezier(0.26,0.46,0,0.88);
+      +media-breakpoint-up(md)
+        .output__item-box
+          width: auto
+          max-width: 320px
+
+      &:nth-child(even)
+        margin-top: $of-col
+      &:nth-child(odd)
+        margin-bottom: $of-col
+    &.small
+      height: $hg-sm
+      width: 50%;
+      background: #FFF;
+      position: relative;
+      overflow: hidden;
+      transition: all 1s cubic-bezier(0.26,0.46,0,0.88)
+
+      +media-breakpoint-up(md)
+        .output__item-box
+          width: auto
+          max-width: 175px
+
+      &:nth-child(odd)
+        margin-right: $of-col / 2
+
+      &:nth-child(even)
+        margin-left: $of-col / 2
+
+    &-links
+      padding: 10px 15px
+      list-style: none
+      margin-bottom: 0
+
+      a
+        display: block
+        font-size: 12px
+        line-height: 1.2
+        margin-bottom: 0
+
+    &-description
+      padding: 10px 15px
+      font-size: 12px
+      line-height: 1.2
+      margin-bottom: 0
+

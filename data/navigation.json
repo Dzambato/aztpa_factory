@@ -68,8 +68,8 @@
     "brand": {
       "logo": "/static/img/general/brand.svg",
       "text": "АЗТПА",
-      "width": "30px",
-      "height": "30px"
+      "width": "80px",
+      "height": "65px"
     },
     "topLineTitle": "АО НПО Алексинский завод трубопроводной арматуры"
   }
