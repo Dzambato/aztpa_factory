@@ -1,7 +1,7 @@
 {
   "mainSlider": {
     "0" : {
-      "img": "/static/img/content/main-slider/slide-1.jpg",
+      "img": "/static/img/content/main-slider/slide-4.jpg",
       "url": "javascript:void(0)",
       "title": "Склад готовой продукции",
       "description": "Проверьте необходимое количество на складе",
@@ -9,7 +9,7 @@
       "alt": "alt text"
     },
     "1" : {
-      "img": "/static/img/content/main-slider/slide-2.jpg",
+      "img": "/static/img/content/main-slider/slide-5.jpg",
       "url": "javascript:void(0)",
       "title": "Онлайн отслеживание заказа",
       "description": "Трек-код - это уникальный идентификатор Вашего заказа, по которому можно определить текущий статус (стадию) производства.",
@@ -17,7 +17,7 @@
       "alt": "alt text"
     },
     "2" : {
-      "img": "/static/img/content/main-slider/slide-3.jpg",
+      "img": "/static/img/content/main-slider/slide-8.png",
       "url": "javascript:void(0)",
       "title": "Индивидуальный проект",
       "description": "Заказ индивидуального проекта у наших инженеров",
